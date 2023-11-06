@@ -10,13 +10,13 @@
 
 #root {
   font-family: 'Share Tech', sans-serif;
-  --gunmetal: #122932;
+  --gunmetal: #011b25;
   --green-blue: #476A6F;
-  --light-green: #519E8A;
+  --light-green: #b7d2d8;
   --light-blue: #8DA7BE;
   --alabaster: #F2F0E6;
   --light: #D7E1E5;
-  --electric-green: #64FFDA;
+  --electric-green: #cdedf8;
   height: 100%;
   width: 100%;
 }

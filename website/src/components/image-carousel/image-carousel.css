@@ -1,0 +1,103 @@
+.container{
+    display: flex;
+    overflow: hidden;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    position: relative; 
+}
+.container:hover *{
+    display: flex;
+}
+
+.container > .icon-button{
+    display: none;
+}
+.container:hover > .icon-button{
+    z-index: 10001;
+    display: flex;
+}
+.container:hover > .dots-container{
+    z-index: 10001;
+}
+
+.container:hover > .styled-image{
+    z-index: 10000;
+}
+
+.right-button{
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.56;
+  background: black !important;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 6px;
+  /* z-index: 1000000; */
+
+}
+
+.right-button:hover{
+    opacity: 0.8;
+}
+
+.left-button{
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.56;
+    background: black !important;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    /* z-index: 1000000; */
+  }
+
+  .left-button:hover{
+      opacity: 0.8;
+  }
+
+  .dots-container{
+    position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  bottom: 8px;
+  gap: 4px;
+  justify-content: center;
+  flex-direction: row;
+  }
+
+  .active-dot{
+width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 1;
+  background: white;
+  }
+
+  .dot{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.56;
+  }
+
+  .styled-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+ 

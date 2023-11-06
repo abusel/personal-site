@@ -1,108 +1,53 @@
 import React from 'react'
 import Section from '../../components/section/section'
-import Experience from '../../components/experience/experience'
 import './experience-page.css'
+import Stepper from '../../components/stepper/stepper'
+import lpgImg from "../../img/LPG-1.png";
+import lpgImg2 from "../../img/LPG-2.png";
+import searchImg1 from "../../img/Search1.png";
 
-const exps = [
+
+const expList = [
 	{
-		key: 'Adobe Intern',
-		id: 'adobe2021',
-		name: 'Software Engineer Intern',
-		location: 'Adobe',
-		link: 'https://www.adobe.com/',
-		dates: 'May 2021 - August 2021',
-		bullets: [
-			'Collaborated with data visualization researchers to improve an automatic chart-captioning model using Python and Scikit-Learn.',
-			'Built and deployed a UI component to the Adobe Experience Platform using Angular and TypeScript.',
-			'Built a POC for visualizing user flow throughout the Adobe Experience Platform using Python, Angular, and Azure.',
+		title: "Flok (YC W21)",
+		subtitle1: "Software Engineer",
+		subtitle2: "March 2022 - current",
+		additionalInfo: ["First engineer hire, helped scale systems from the ground up for venture backed travel tech startup with >$1M in revenue", "Worked on core retreat management platform enabling companies to book hotels and manage employee travel logistics", "Developed custom React component library to replace MaterialUI across all Flok apps", "Developed Squarespace-like website generator feature used by over 10,000 retreat attendees and 100+ companies", "Developed itinerary builder feature allowing users to collaboratively create an itinerary", "Worked with CTO designing the system architecture that supports asychronous file uploads and user notifications"],
+		images: [
+			{
+				src: lpgImg,
+				alt: "image"
+			},
+			{
+				src: lpgImg2,
+				alt: "image"
+			},
+			{
+				src: searchImg1,
+				alt: "image"
+			}
 		]
 	},
 	{
-		key: 'Berkeley Developer',
-		id: 'swdb',
-		name: 'Full Stack Web Developer',
-		location: 'Statewide Redistricting Database in UC Berkeley',
-		locLink: 'https://statewidedatabase.org/',
-		dates: 'August 2020 - May 2021, August 2021 - present',
-		bullets: [
-			'Implement the redesign of the Statewide Redistricting Database website on the front/back end.',
-			'Translate Figma designs for the dataset search/download portal into web pages using Angular and TypeScript.',
-			'Design data models and implement business logic exposed via API in Django and Python.'
-		]
+title: "BizSwipe | Tinder for B2B connections",
+subtitle1: "iOS Development Intern",
+subtitle2: "May 2020 - July 2020",
+additionalInfo: ["Created an in app browser, helping increase average user activity time", "Established app wide loading patterns and led design of splash screen"]
 	},
 	{
-		key: 'Assistant',
-		id: 'cmu',
-		name: 'Deep Learning Research Assistant',
-		location: 'VDEL in Carnegie Mellon University',
-		locLink: 'http://vdel.me.cmu.edu/',
-		dates: 'April 2020 - February 2021',
-		bullets: [
-			'Implement deep learning solutions for interdisciplinary problems, mainly within the field of ' +
-			'additive manufacturing.',
-			'Applied transfer learning to build a CNN model that classifies flaws within additive manufacturing ' +
-			'processes using audio samples.',
-			'Currently creating an algorithm to develop abstract knowledge of engineering components from images using semantic segmentation, ' +
-			'graph neural networks, and classical computer vision techniques.',
-			'Utilize PyTorch, SciPy, and Scikit-Learn.'
-		]
-	},
-	{
-		key: 'Intern',
-		id: 'heidelberg',
-		name: 'Research Intern',
-		location: 'Heidelberg University',
-		locLink: 'https://www.physi.uni-heidelberg.de/?lang=en',
-		dates: 'July 2018 - August 2018',
-		bullets: [
-			'Programmed in Python creating data collection systems for various physics experiments using Raspberry Pi 3.',
-			'Did data analysis on experiment results using Pandas, NumPy, and Matplotlib.',
-			'Worked extensively with Ph.D students to design and build many experiments having to do with classical optics.',
-		]
-	},
-	{
-		key: 'Developer',
-		id: 'developer',
-		name: 'Freelance Web Developer',
-		dates: 'September 2018 - present',
-		bullets: [
-			'Build modern, maintainable, and beautiful websites for local organizations/artists.',
-			'Work with a variety of technologies including JavaScript, React, jQuery, and Nginx.',
-			'Communicate daily with multiple clients to ensure all needs are met.',
-		],
-		examples: [
-			{name: 'dvhackers.com', link: 'http://www.dvhackers.com/'},
-			{name: 'tjef.org', link: 'https://tjef.org'},
-			{name: 'chars-hotdogs.com', link: 'https://chars-hotdogs.com'}
-		]
-	},
-	{
-		key: 'Tutor',
-		id: 'tutor',
-		name: 'Computer Science Tutor',
-		location: 'Diablo Valley College',
-		locLink: 'https://dvc.edu',
-		dates: 'September 2019 - May 2020',
-		bullets: [
-			'Tutor DVC students in Computer Science topics ranging from algorithms & data structures to assembly programming.',
-			'Work mainly with C, C++, Java, and MASM.',
-			'Practice creative problem solving, effective communication skills, and programming best practices.'
+		title: "Augusta HiTech | Product Development Agency",
+		subtitle1: "Summer Intern",
+		subtitle2: "May 2019 - August 2019",
+		additionalInfo: [
+			"Rotated between QA, dev, and product teams in order to learn all stages of the app development cycle",
+			"Helped identify and fix bugs in live streaming feature of UBQFit fitness iOS app prior to production releases"
 		]
 	}
 ]
 
 const ExperienceList = props => (
 	<Section id="experience" title="Experience">
-		{exps.map( exp => (
-			<Experience id={exp.id}
-									name={exp.name}
-									location={exp.location}
-									locLink={exp.locLink}
-									dates={exp.dates}
-									bullets={exp.bullets}
-									examples={exp.examples}/>
-		))}
-
+		<Stepper steps={expList}/>
 	</Section>
 )
 

@@ -5,7 +5,7 @@ import './skills-page.css'
 
 const languages = [
 	{
-		name: 'Javascript',
+		name: 'Javascript / Typescript',
 		gold: 5
 	},
 	{
@@ -13,63 +13,54 @@ const languages = [
 		gold: 5
 	},
 	{
-		name: 'C++',
+		name: 'Ruby',
 		gold: 4
+	},
+	{
+		name: 'Swift',
+		gold: 3
 	},
 	{
 		name: 'HTML/CSS',
 		gold: 5
 	},
-	{
-		name: 'Java',
-		gold: 4
-	}
+	
 ]
 
 const technologies = [
 	{
-		name: "PyTorch",
-		gold: 5
-	},
-	{
-		name: "Keras",
-		gold: 4
-	},
-	{
 		name: 'React',
-		gold: 4
-	},
-	{
-		name: 'jQuery',
-		gold: 4
+		gold: 5
 	},
 	{
 		name: 'Python Flask',
 		gold: 5
 	},
 	{
-		name: 'NumPy',
+		name: 'Ruby Rails',
 		gold: 4
 	},
 	{
-		name: 'Git',
-		gold: 5
+		name: "SQLAlchemy",
+		gold: 4
+	},
+	{
+		name: "PostgreSQL",
+		gold: 4
 	}
+
 ]
 
 const expertise = [
 	{
 		name: 'Frontend',
-		gold: 4
+		gold: 5
 	},
 	{
 		name: 'Backend',
-		gold: 3
-	},
-	{
-		name: 'Deep learning',
 		gold: 4
-	}
+	},
+
 ]
 class SkillsPage extends React.Component {
 	constructor(props) {
