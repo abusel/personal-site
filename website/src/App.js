@@ -55,7 +55,7 @@ function App() {
       <ParticleBackground color='#122932'/>
       <div id='body'>
         <LandingPage/>
-        <AboutPage/>
+        {/* <AboutPage/> */}
         <ExperiencePage/>
         <ProjectsPage/>
         <SkillsPage/>
